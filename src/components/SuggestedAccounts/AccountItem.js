@@ -1,15 +1,15 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Tippy from "@tippyjs/react/headless";
-import { Wrapper as PopperWrapper } from "~/components/Popper";
-import PropTypes from "prop-types";
 import classNames from "classnames/bind";
-import styles from "./SuggestedAccounts.module.scss";
+import { Wrapper as PopperWrapper } from "~/components/Popper";
 import AccountPreview from "./AccountPreview/AccountPreview";
+import styles from "./SuggestedAccounts.module.scss";
 const cx = classNames.bind(styles);
 
 function AccountItem() {
   const renderPreview = (props) => {
+    
     return (
       <div tabIndex="-1" {...props}>
         <PopperWrapper>
@@ -45,5 +45,4 @@ function AccountItem() {
     </div>
   );
 }
-AccountItem.propTypes = {};
 export default AccountItem;
